@@ -1,0 +1,28 @@
+@keyframes titilar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .estrella {
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+    animation: titilar 2s infinite;
+    position: absolute;
+    left: 50%; /* Centrar horizontalmente */
+    top: 50%; /* Centrar verticalmente */
+    transform: translate(-50%, -50%); /* Ajustar el centro exacto de la estrella */
+  }
+
+  h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+    
+  }
+
+
+  body {
+    background-color: black;
+  }
+  
