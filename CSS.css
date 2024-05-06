@@ -1,0 +1,176 @@
+
+
+
+
+
+  body {
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 45%);
+  }
+
+  .burbujas {
+    display: flex;
+    width: 98vw; 
+    height: 99vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    gap: 10px; /* Espacio entre las burbujas */
+    will-change: transform;
+}
+
+.burbuja {
+    position: relative;
+    width: 4px; /* Tamaño de la burbuja */
+    height: 5px; /* Tamaño de la burbuja */
+    border-radius: 0px;
+    animation: animate 60s linear infinite;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 40px rgb(72, 0, 255), 0 0 60px rgb(255, 255, 255);
+    transform: translateZ(0); 
+}
+  
+  
+  @keyframes animate {
+    0% {
+        transform: translateY(-90vh) scale(1);
+        filter: hue-rotate(360deg);
+    }
+    100% {
+      transform: translateY(90vh) scale(0); /* Ajustamos la altura para que llegue hasta el final de la página */
+      filter: hue-rotate(200deg);
+  }
+  }
+
+  @keyframes intermitente {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.burbuja.intermitente {
+  animation: intermitente 3s ease-in-out infinite, animate 140s linear infinite;
+}
+
+.burbuja.naranja {
+  background: #FFA500;
+}
+
+.burbuja.sombra {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(114, 239, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* CONTENIDO */
+
+
+.contentt {
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left:15%;
+  margin-right:15%;
+  color: #ffffff;
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  z-index: 1;
+  height: 100%; /* Establecemos el alto del contenido como el alto del cuerpo */
+  overflow: auto; /* Agregamos desplazamiento si el contenido excede el tamaño del contenedor */
+  padding: 20px; 
+  
+}
+
+
+.content {
+  position: relative;
+  background-color: #1a1818e5;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left:15%;
+  margin-right:15%;
+  color: #ffffff;
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  border: 1px solid #000000;
+  z-index: 1;
+  height: 100%; /* Establecemos el alto del contenido como el alto del cuerpo */
+  overflow: auto; /* Agregamos desplazamiento si el contenido excede el tamaño del contenedor */
+  padding: 20px; 
+  transition: transform .3s;
+}
+
+.imgUser img{
+  
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border: 0px solid #000000;
+  height: 400px;
+}
+.imgUser1 img{
+  
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border: 0px solid #000000;
+  height: 300px;
+}
+
+.imgUser2 img{
+  
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border: 1px solid #00d4f0c4;
+  box-shadow: 0 0 3px rgb(255, 255, 255), 0 0 4px rgb(72, 0, 255), 0 0 5px rgb(255, 255, 255);
+  height: 500px;
+
+}
+
+
+.imgIcon img{
+
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border: 0px solid #000000;
+  height: 50px;
+  width: auto;
+  margin-bottom: 0%;
+  
+}
+.imgIcon {
+  background-color: #a3a3a39d;
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border: 0px solid #000000;
+  height: 50px;
+  width: auto;
+  padding: 1%;
+}
+h1 span {
+  color: rgb(15, 172, 164); /* Color azul solo para la letra M */
+}
+h2 span {
+  color: rgb(15, 172, 164); /* Color azul solo para la letra M */
+}
+
+.content:hover {
+  transform: scale(1.03); 
+  border: 1px solid #747474;
+  background-color: #1a1818f6;
+
+}
+
+
+
+  
