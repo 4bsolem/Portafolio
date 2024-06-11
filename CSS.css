@@ -1,8 +1,6 @@
 
 
 
-
-
   body {
     background: rgb(34,34,34);
     background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 45%);
@@ -147,6 +145,17 @@
   margin-bottom: 0%;
   
 }
+.imgIcon img:hover {
+  filter: drop-shadow(0 0 3px rgb(255, 255, 255)) drop-shadow(0 0 4px rgb(72, 0, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
+  border-radius: 12px; /* Establece el radio de las esquinas */
+  border: 0px solid #000000; /* Borra el borde */
+  height: 50px;
+  width: auto;
+  margin-bottom: 0%;
+  transition:  0.5s ease; 
+}
+
+
 .imgIcon {
   background-color: #a3a3a39d;
   border-radius: 12px 12px 12px 12px;
@@ -158,10 +167,10 @@
   padding: 1%;
 }
 h1 span {
-  color: rgb(15, 172, 164); /* Color azul solo para la letra M */
+  color: rgb(7, 231, 220); /* Color azul solo para la letra M */
 }
 h2 span {
-  color: rgb(15, 172, 164); /* Color azul solo para la letra M */
+  color: rgb(7, 231, 220); /* Color azul solo para la letra M */
 }
 
 .content:hover {

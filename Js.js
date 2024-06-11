@@ -1,3 +1,7 @@
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("burbujas-container");
     let numBurbujas = 100; // Número de burbujas por defecto
@@ -67,4 +71,114 @@ document.addEventListener("DOMContentLoaded", function () {
     // Llamamos a la función también cuando se redimensiona la ventana, pero usando el temporizador para evitar ejecuciones excesivas
     window.addEventListener('resize', onWindowResize);
 });
+
+
+// Datos de ejemplo para las tarjetas
+const tarjetas = [
+    {
+        id: 1,
+        titulo: "App Movil: Jobby",
+        imagenSrc: "IMG/PROYECTOS/JOBBY.png",
+        descripcion: "Jobby fue mi proyecto portafolio de titulo, el cual consistio en la planeación, diseño y desarrollo de una app movil que solucionara una problematica o una falencia que estuviese presente en la actualidad, en la cual con mi grupo nos percatamos que existe falta de promoción a la mano de obra independiente. Por lo que mediante una aplicación movil desarrollada con Ionic y Angular, para la base de datos utilizamos My sql y NodeJs para crear una API la cual fue encargada del almacenamiento y transacción de los datos, GitHub para el control de versiones de la app y finalmente JiraSoftware nos ayudo a la planificación y asignación de tareas. La aplicación contaba con distintas funcionalidades tales como: Creación y edición de perfiles de usuario, Posteo de publicaciónes con o sin imagenes, busqueda de publicaciones con distintos filtros, sistema de registro y seguimiento de solicitudes de trabajo, reseñas y calificación de usuarios, guardado de usuarios favoritos y cambio en la disponibilidad de un perfil.",
+        tecnologias: ["IONIC", "ANGULAR", "JAVASCRIPT", "NODEJS", "MYSQL", "GITHUB", "JIRASOFTWARE"]
+    },
+    {
+        id: 2,
+        titulo: "Registro y control de ordenes de trabajo",
+        descripcion: "Este sistema fue el inicio de un proyecto de digitalización de datos y procesos de una corporación, para desarrollar este sistema se realizaron diversas entrevistas para la captura de requisitos, el sistema fue desarrollado en la plataforma de Google Appscript, por el limitado tiempo se opto por usar de base datos GoogleSheets aprovechando las capacidades de la paltaforma. Tambien uno de los apartados del sistema permite generar documentos en formato PDF a modo de boleta con los datos internos de la orden de trabajo.",
+        imagenSrc: "IMG/PROYECTOS/CONTROL OT.png",
+        tecnologias: ["HTML", "CSS", "JAVASCRIPT", "APPSCRIPT"]
+    },
+    {
+        id: 3,
+        titulo: "Generador de caja",
+        descripcion: "Este sistema fue diseñado y creado para generar el calculo de la caja de el dia especificado obteniendo los datos del sistema de control de ordenes de trabajo, esto genera un desglose de la información necesaria por tipo de pago monto y vendedor/a. Ademas de eso el sistema es capaz de generar un documento PDF con la información necesaria para rendir caja, adicional a eso tiene la funcionalidad de enviar el documento PDF a un correo especificado de manera automatica.",
+        imagenSrc: "IMG/PROYECTOS/CAJA.png",
+        tecnologias: ["HTML", "CSS", "JAVASCRIPT", "APPSCRIPT"]
+    },
+    {
+        id: 4,
+        titulo: "Mantenedor de descuentos y promociones",
+        descripcion: "Este modulo gestiona los descuentos, promociones, convenios y medicos que existen como opciones para el sistema de control de ordenes de trabajo para que este tipo de datos pueda ser manipulado facilmente a traves de una interfaz en vez de codigo.",
+        imagenSrc: "IMG/PROYECTOS/DESCUENTOS Y PROMOCIONES.png",
+        tecnologias: ["HTML", "CSS", "JAVASCRIPT", "APPSCRIPT"]
+    },
+    {
+        id: 5,
+        titulo: "Gestion de pedidos",
+        descripcion: "Este sistema tiene la finalidad de listar todos los pedidos que se requieren hacer por cada orden de trabajo, y con esto poder generar pedidos a distintos proveedores en formato excel para ser enviadas por correo. Ademas tiene la funcionalidad de monitorear el estado de estos pedidos y aceptarlos o rechazarlos a su recepción para que pasen a la siguiente etapa de la orden de trabajo.",
+        imagenSrc: "IMG/PROYECTOS/GESTION CRISTALES.png",
+        tecnologias: ["HTML", "CSS", "JAVASCRIPT", "APPSCRIPT"]
+    },
+    {
+        id: 6,
+        titulo: "Control Producción",
+        descripcion: "En este sistema se gestionan las distintas etapas que se puede encontrar un trabajo, se asignan trabajadores y tambien se chequea la calidad de este por lo que puede ser rechazado o aceptado el producto final. Adicional a esto este modulo actualiza el estado de la orden de trabajo para mantenerlo actualizado y que en cualquier momento de consultar una orden de trabajo saber en que etapa de producción se encuentra.",
+        imagenSrc: "IMG/PROYECTOS/CONTROL PRODUCCION.png",
+        tecnologias: ["HTML", "CSS", "JAVASCRIPT", "APPSCRIPT"]
+    },
+    {
+        id: 7,
+        titulo: "Sistema inventario",
+        descripcion: "El sistema de inventario se desarrollo por la necesidad que tenia el cliente de tener una lista centralizada de su inventario y que fuera de facil manipulación para poder crear o editar productos. Este sistema tiene la ventaja de permitir llevar un control de stock actualizado de los distintos productos mediante las distintas ventas que tengan estos. tambien tiene un apartado para registrar movimientos de stock entre bodegas, registrar ingresos de productos con boletas o numeros de guia y fecha correspondiente, ademas puede generar un documento pdf para acreditar la validez de un movimiento de stock realizado.",
+        imagenSrc: "IMG/PROYECTOS/INVENTARIO.png",
+        tecnologias: ["HTML", "CSS", "JAVASCRIPT", "APPSCRIPT"]
+    }
+    
+];
+
+// Función para crear una tarjeta basada en los datos proporcionados
+// Función para crear una tarjeta basada en los datos proporcionados
+function crearTarjeta(titulo, imagenSrc, descripcion, tecnologias, id) {
+    let cardHTML;
+    if (id % 2 === 0) { // ID par
+        cardHTML = `
+        <div class="content" style="display: flex; position: relative;">
+        <div style="text-align: right; padding-right: 1%;">
+            <h2>${titulo}</h2>
+            <p>${descripcion}</p>
+            <div class="imgIcon" style=" width: fit-content; float: right;">
+            ${tecnologias.map(tec => `<img src="IMG/ICONS/${tec}.png" title="${tec}"/>`).join('')}
+        </div> 
+        </div>
+        <div class="imgUser" style="position: relative;">
+            <img src="${imagenSrc}"/>
+        </div>
+    </div>
+        
+        
+        `;
+    } else { // ID impar
+        cardHTML = `
+        <div class="content" style="display: flex; position: relative;">
+            <div class="imgUser">
+                <img src="${imagenSrc}"/>
+            </div>
+            <div style="text-align: left; padding-left: 1%;">
+                <h2>${titulo}</h2>
+                <p>${descripcion}</p>
+                <div class="imgIcon" style="width: fit-content;">
+                    <div>${tecnologias.map(tec => `<img src="IMG/ICONS/${tec}.png" title="${tec}"/>`).join('')}</div> 
+                </div> 
+            </div>
+        </div>
+        `;
+    }
+    return cardHTML;
+}
+
+
+// Función para agregar todas las tarjetas al contenedor
+// Función para agregar todas las tarjetas al contenedor
+function agregarTarjetasAlContenedor(tarjetas) {
+    const container = document.getElementById('cardContainer');
+    tarjetas.forEach(tarjeta => {
+        const card = crearTarjeta(tarjeta.titulo, tarjeta.imagenSrc, tarjeta.descripcion, tarjeta.tecnologias, tarjeta.id); // Pasar el id de la tarjeta
+        container.innerHTML += card;
+    });
+}
+
+
+// Llamada a la función para agregar las tarjetas al contenedor
+agregarTarjetasAlContenedor(tarjetas);
 
