@@ -442,4 +442,90 @@ h2 span {
     width: 100%;
     height: auto;
   }
+  .icon-text {
+    position: relative;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    width: 20px;
+    font-size: 14px;
+    padding: 2px;
+    display: flex; /* Agrega flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: 1000;
+    opacity: 1; /* Inicialmente oculto */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+    
+  }
+
+  .imgIconIzquierda img{
+
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 0px solid #000000;
+    height: 35px;
+    width: auto;
+    
+  }
+  .imgIconIzquierda img:hover {
+    filter: drop-shadow(0 0 3px rgb(255, 255, 255)) drop-shadow(0 0 4px rgb(72, 0, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
+    border-radius: 12px; /* Establece el radio de las esquinas */
+    border: 0px solid #000000; /* Borra el borde */
+    height: 35px;
+    width: auto;
+    margin-bottom: 0%;
+    transition:  0.5s ease; 
+  }
+  
+  .imgIconDerecha img{
+
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 0px solid #000000;
+    height: 35px;
+    width: auto;
+    
+  }
+  .imgIconDerecha img:hover {
+    filter: drop-shadow(0 0 3px rgb(255, 255, 255)) drop-shadow(0 0 4px rgb(72, 0, 255)) drop-shadow(0 0 5px rgb(255, 255, 255));
+    border-radius: 12px; /* Establece el radio de las esquinas */
+    border: 0px solid #000000; /* Borra el borde */
+    height: 35px;
+    width: auto;
+    margin-bottom: 0%;
+    transition:  0.5s ease; 
+  }
+
+  .imgIconIzquierda {
+    background-color: #a3a3a39d;
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 0px solid #000000;
+    height: 40px;
+    width: auto;
+    padding: 1%;
+    width: fit-content;
+  }
+  
+  .imgIconDerecha {
+    background-color: #a3a3a39d;
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 0px solid #000000;
+    height: 40px;
+    width: auto;
+    padding: 1%;
+    width: fit-content;
+    float: right;
+  }
+  
+
 }

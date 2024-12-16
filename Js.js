@@ -79,7 +79,7 @@ const tarjetas = [
         id: 1,
         titulo: "App Movil: Jobby",
         imagenSrc: "IMG/PROYECTOS/JOBBY.png",
-        descripcion: "Jobby fue mi proyecto portafolio de titulo, el cual consistio en la planeación, diseño y desarrollo de una app movil que solucionara una problematica o una falencia que estuviese presente en la actualidad, en la cual con mi grupo nos percatamos que existe falta de promoción a la mano de obra independiente. Por lo que mediante una aplicación movil desarrollada con Ionic y Angular, para la base de datos utilizamos My sql y NodeJs para crear una API la cual fue encargada del almacenamiento y transacción de los datos, GitHub para el control de versiones de la app y finalmente JiraSoftware nos ayudo a la planificación y asignación de tareas. La aplicación contaba con distintas funcionalidades tales como: Creación y edición de perfiles de usuario, Posteo de publicaciónes con o sin imagenes, busqueda de publicaciones con distintos filtros, sistema de registro y seguimiento de solicitudes de trabajo, reseñas y calificación de usuarios, guardado de usuarios favoritos y cambio en la disponibilidad de un perfil.",
+        descripcion: "Jobby fue mi proyecto portafolio de título, el cual consistió en la planeación, diseño y desarrollo de una app móvil que solucionara una problemática presente en la actualidad. En conjunto con mi grupo, nos percatamos de la falta de promoción de la mano de obra independiente. Por ello, desarrollamos una aplicación móvil utilizando Ionic y Angular. Para la base de datos usamos MySQL y Node.js para crear una API encargada del almacenamiento y transacción de datos. Además, utilizamos GitHub para el control de versiones y Jira Software para la planificación y asignación de tareas. La aplicación contaba con diversas funcionalidades, tales como: creación y edición de perfiles de usuario, posteo de publicaciones con o sin imágenes, búsqueda de publicaciones con distintos filtros, sistema de registro y seguimiento de solicitudes de trabajo, reseñas y calificación de usuarios, guardado de usuarios favoritos y cambio en la disponibilidad de un perfil.",
         tecnologias: ["IONIC", "ANGULAR", "JAVASCRIPT", "NODEJS", "MYSQL", "GITHUB", "JIRASOFTWARE"]
     },
     {
@@ -147,7 +147,7 @@ function crearTarjeta(titulo, imagenSrc, descripcion, tecnologias, id) {
         <div class="contentUp" style="display: flex; position: relative;">
             <div class="textoDerecha" >
                 <h2>${titulo}</h2>
-                <p>${descripcion}</p>
+                <p  style="text-align: justify;">${descripcion}</p>
                 <div class="imgIconDerecha" >
                     ${tecnologias.map(tec => `<img src="IMG/ICONS/${tec}.png" title="${tec}"/>`).join('')}
                 </div>
@@ -165,7 +165,7 @@ function crearTarjeta(titulo, imagenSrc, descripcion, tecnologias, id) {
             </div>
             <div class="textoIzquierda" >
                 <h2>${titulo}</h2>
-                <p>${descripcion}</p>
+                <p  style="text-align: justify;">${descripcion}</p>
                 <div class="imgIconIzquierda" >
                     <div>${tecnologias.map(tec => `<img src="IMG/ICONS/${tec}.png" title="${tec}"/>`).join('')}</div>
                 </div>
