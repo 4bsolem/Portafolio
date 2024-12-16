@@ -315,6 +315,12 @@ h2 span {
 
 }
 
+.contentUp:hover {
+  transform: scale(1.03); 
+  border: 1px solid #747474;
+  background-color: #1a1818f6;
+
+}
 
 
   /*CONFIGURACION PARA DISTINTAS PANTALLAS*/
